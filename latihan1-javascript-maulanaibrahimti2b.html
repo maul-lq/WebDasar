@@ -86,7 +86,7 @@
             text-align: center;
         }
 
-        #btnTambahBuah {
+        #btnTambahNamaOrang {
             display: block;
             margin: 10px auto;
         }
@@ -147,10 +147,10 @@
         <h1>Belajar JavaScript</h1>
         <button id="btnAlert">Klik untuk Alert</button>
         <p id="output"></p>
-        <input type="text" id="inputNama" placeholder="Masukkan nama">
+        <input type="text" id="inputNama" placeholder="Masukkan nama" required>
         <button id="btnSapa">Sapa</button>
-        <ul id="listBuah"></ul>
-        <button id="btnTambahBuah">Tambah Buah</button>
+        <ul id="listNama"></ul>
+        <button id="btnTambahNamaOrang">Tambah Orang</button>
     </div>
 
     <h2 style="text-align: center; color: #4CAF50; margin-top: 20px;">Berikut adalah kode javascript yang saya buat di html!</h2>
@@ -297,41 +297,41 @@
         console.log(`Max: ${Number.MAX_VALUE}, Min: ${Number.MIN_VALUE}`);
 
         // 29. JS Arrays
-        let buah = ["apel", "jeruk", "mangga"];
-        console.log(`Buah pertama: ${buah[0]}`);
+        let namaOrang = ["Fikri", "Rizki", "Meca"];
+        console.log(`Nama pertama: ${namaOrang[0]}`);
 
         // 30. JS Array Methods
-        buah.push("pisang");
-        console.log(`Buah-buahan: ${buah.join(", ")}`);
-        const listBuah = document.getElementById("listBuah");
-        const renderBuah = () => {
-            listBuah.innerHTML = "";
-            buah.forEach(function (item) {
+        namaOrang.push("Dendy");
+        console.log(`Nama-nama orang: ${namaOrang.join(", ")}`);
+        const listNama = document.getElementById("listNama");
+        const renderNamaOrang = () => {
+            listNama.innerHTML = "";
+            namaOrang.forEach(function (item) {
                 const li = document.createElement("li");
                 li.textContent = item;
-                listBuah.appendChild(li);
+                listNama.appendChild(li);
             });
         };
-        renderBuah();
+        renderNamaOrang();
 
-        document.getElementById("btnTambahBuah").addEventListener("click", function () {
-            const buahBaru = prompt("Masukkan nama buah baru:");
-            if (buahBaru) {
-                buah.push(buahBaru);
-                renderBuah();
+        document.getElementById("btnTambahNamaOrang").addEventListener("click", function () {
+            const namaBaru = prompt("Masukkan nama orang baru:");
+            if (namaBaru) {
+                namaOrang.push(namaBaru);
+                renderNamaOrang();
             }
         });
 
         // 31. JS Array Search
-        console.log(`Index jeruk: ${buah.indexOf("jeruk")}`);
+        console.log(`Index Rizki: ${namaOrang.indexOf("Rizki")}`);
 
         // 32. JS Array Sort
-        buah.sort();
-        console.log(`Buah setelah diurutkan: ${buah}`);
+        namaOrang.sort();
+        console.log(`Nama setelah diurutkan: ${namaOrang}`);
 
         // 33. JS Array Iteration
-        buah.forEach((item, index) => {
-            console.log(`Buah ke-${index + 1}: ${item}`);
+        namaOrang.forEach((item, index) => {
+            console.log(`Nama ke-${index + 1}: ${item}`);
         });
 
         // 34. JS Array Const
@@ -563,41 +563,41 @@
         console.log(`Max: ${Number.MAX_VALUE}, Min: ${Number.MIN_VALUE}`);
 
         // 29. JS Arrays
-        let buah = ["apel", "jeruk", "mangga"];
-        console.log(`Buah pertama: ${buah[0]}`);
+        let namaOrang = ["Fikri", "Rizki", "Meca"];
+        console.log(`Nama pertama: ${namaOrang[0]}`);
 
         // 30. JS Array Methods
-        buah.push("pisang");
-        console.log(`Buah-buahan: ${buah.join(", ")}`);
-        const listBuah = document.getElementById("listBuah");
-        const renderBuah = () => {
-            listBuah.innerHTML = "";
-            buah.forEach(function (item) {
+        namaOrang.push("Dendy");
+        console.log(`Nama-nama orang: ${namaOrang.join(", ")}`);
+        const listNama = document.getElementById("listNama");
+        const renderNamaOrang = () => {
+            listNama.innerHTML = "";
+            namaOrang.forEach(function (item) {
                 const li = document.createElement("li");
                 li.textContent = item;
-                listBuah.appendChild(li);
+                listNama.appendChild(li);
             });
         };
-        renderBuah();
+        renderNamaOrang();
 
-        document.getElementById("btnTambahBuah").addEventListener("click", function () {
-            const buahBaru = prompt("Masukkan nama buah baru:");
-            if (buahBaru) {
-                buah.push(buahBaru);
-                renderBuah();
+        document.getElementById("btnTambahNamaOrang").addEventListener("click", function () {
+            const namaBaru = prompt("Masukkan nama orang baru:");
+            if (namaBaru) {
+                namaOrang.push(namaBaru);
+                renderNamaOrang();
             }
         });
 
         // 31. JS Array Search
-        console.log(`Index jeruk: ${buah.indexOf("jeruk")}`);
+        console.log(`Index Rizki: ${namaOrang.indexOf("Rizki")}`);
 
         // 32. JS Array Sort
-        buah.sort();
-        console.log(`Buah setelah diurutkan: ${buah}`);
+        namaOrang.sort();
+        console.log(`Nama setelah diurutkan: ${namaOrang}`);
 
         // 33. JS Array Iteration
-        buah.forEach((item, index) => {
-            console.log(`Buah ke-${index + 1}: ${item}`);
+        namaOrang.forEach((item, index) => {
+            console.log(`Nama ke-${index + 1}: ${item}`);
         });
 
         // 34. JS Array Const
